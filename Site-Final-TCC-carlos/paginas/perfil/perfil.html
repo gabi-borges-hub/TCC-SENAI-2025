@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalkyCs - Sua plataforma de gerenciamento de tarefas</title>
+ <link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF6B00', secondary: '#000000' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link id="style1" rel="stylesheet" href="perfil.css">
+    <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+
+<body>
+        <!-- Cabeçalho -->
+
+    <nav class="fundo-cabecalho">
+
+        <div class="container">
+            <!-- Colocação da logo no HTML -->
+            <a href="#" class="logo">
+                <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+            </a>
+
+            <!-- Div dos botões da tela de inicio -->
+         <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+
+<div id="perfil" class="tab-content">
+  <div class="container">
+    <div class="grid-perfil">
+      <div class="perfil-lateral">
+        <div class="card-perfil">
+          <div class="perfil-info">
+            <div class="foto-perfil">
+              <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20photo%20of%20a%20young%20person%20with%20friendly%20smile%2C%20professional%20attire%2C%20neutral%20background%2C%20high%20quality%2C%20photorealistic&width=200&height=200&seq=profile2&orientation=squarish" alt="Foto de perfil">
+            </div>
+            <h2 class="nome-perfil">Marcelo Silva</h2>
+            <div class="status-perfil">
+              <span class="status-indicador verde"></span>
+              <span>Disponível</span>
+            </div>
+            <button class="btn-alterar-foto">Alterar foto</button>
+            <div class="detalhes-perfil">
+              <div class="linha-status">
+                <span>Status</span>
+                <div class="menu-status">
+                  <button class="btn-status-toggle">
+                    <span>Disponível</span>
+                    <i class="ri-arrow-down-s-line"></i>
+                  </button>
+                  <div class="dropdown-status hidden">
+                    <button class="opcao-status verde">Disponível</button>
+                    <button class="opcao-status amarelo">Ausente</button>
+                    <button class="opcao-status vermelho">Ocupado</button>
+                    <button class="opcao-status cinza">Invisível</button>
+                  </div>
+                </div>
+              </div>
+              <div class="linha-membro">
+                <span>Membro desde</span>
+                <span>Março 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-redes">
+          <h3>Redes sociais</h3>
+          <div class="lista-redes">
+            <div class="item-rede">
+              <i class="ri-linkedin-fill"></i>
+              <input type="text" placeholder="Seu perfil do LinkedIn">
+            </div>
+            <div class="item-rede">
+              <i class="ri-twitter-fill"></i>
+              <input type="text" placeholder="Seu perfil do Twitter">
+            </div>
+            <div class="item-rede">
+              <i class="ri-instagram-fill"></i>
+              <input type="text" placeholder="Seu perfil do Instagram">
+            </div>
+            <div class="item-rede">
+              <i class="ri-github-fill"></i>
+              <input type="text" placeholder="Seu perfil do GitHub">
+            </div>
+            <button class="btn-adicionar-rede">+ Adicionar mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="perfil-conteudo">
+        <div class="card-infos">
+          <h2>Informações pessoais</h2>
+          <div class="formulario">
+            <div class="campo">
+              <label for="full_name">Nome completo</label>
+              <input type="text" id="full_name" value="Marcelo Silva">
+            </div>
+            <div class="campo">
+              <label for="display_name">Nome de exibição</label>
+              <input type="text" id="display_name" value="Marcelo S.">
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" value="marcelo.silva@exemplo.com.br">
+            </div>
+            <div class="campo">
+              <label for="phone">Telefone</label>
+              <input type="tel" id="phone" value="(11) 98765-4321">
+            </div>
+            <div class="campo col-span-2">
+              <label for="bio">Biografia</label>
+              <textarea id="bio">Profissional de marketing digital com mais de 5 anos de experiência em estratégias de comunicação online. Apaixonado por tecnologia e inovação.</textarea>
+            </div>
+            <div class="campo">
+              <label for="location">Localização</label>
+              <input type="text" id="location" value="São Paulo, SP">
+            </div>
+            <div class="campo">
+              <label for="language">Idioma preferido</label>
+              <select id="language">
+                <option value="pt-BR" selected>Português (Brasil)</option>
+                <option value="en-US">English (US)</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
+          </div>
+          <div class="acoes">
+            <button class="btn-salvar">Salvar alterações</button>
+          </div>
+        </div>
+
+
+<div class="grid-preferencias">
+  <div class="card-preferencias">
+    <h3>Preferências de conta</h3>
+    <div class="opcao">
+      <label>Notificações por e-mail</label>
+      <input type="checkbox" checked>
+    </div>
+    <div class="opcao">
+      <label>Alertas sonoros</label>
+      <input type="checkbox" checked>
+    </div>
+    <div class="opcao">
+      <label>Confirmações de leitura</label>
+      <input type="checkbox" checked>
+    </div>
+    <div class="opcao">
+      <label>Salvamento automático</label>
+      <input type="checkbox" checked>
+    </div>
+    <div class="opcao">
+      <label>Modo Escuro</label>
+      <input type="checkbox" id="dark-mode"> </div>
+  </div>
+</div>
+
+
+
+<div class="visibilidade-perfil">
+  <h4 class="titulo-bloco">Nível de visibilidade do perfil</h4>
+  <div class="controle-slider">
+    <input type="range" min="0" max="2" value="0" class="slider-visibilidade" id="sliderPerfil" />
+    <div class="opcoes-visibilidade" id="opcoesPerfil">
+      <span class="ativo" data-index="0">Apenas <br/>eu</span>
+      <span data-index="1">Equipe</span>
+      <span data-index="2">Todos</span>
+    </div>
+  </div>
+</div>
+
+          <div class="card-seguranca">
+            <h3>Segurança da conta</h3>
+            <button id="botao-abrir-modal" class="btn-seguranca" onclick="abrirModalSenha()">Alterar senha</button>
+            <button class="btn-seguranca">Autenticação de dois fatores</button>
+            <button class="btn-seguranca">Dispositivos conectados</button>
+            <button class="btn-seguranca">Histórico de atividades</button>
+            <button class="btn-excluir-conta">Excluir conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Botão para abrir o modal -->
+<button id="botao-abrir-modal">Alterar Senha</button>
+<!-- Ou outro botão extra -->
+<button id="abrir-modal-senha-final">Alterar Senha</button>
+
+<!-- Modal de senha -->
+<div id="modal-senha" class="hidden">
+  <div class="modal-conteudo">
+    <h2>Alterar Senha</h2>
+    <input type="password" id="nova-senha" placeholder="Nova Senha">
+    <button id="btn-salvar-senha">Salvar</button>
+    <button id="btn-fechar-modal">Fechar</button>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+</body>
+<script src="/assets/css/modo-escuro.js"></script>
+<script type="module" src="perfil.js"></script>
+
+</html>

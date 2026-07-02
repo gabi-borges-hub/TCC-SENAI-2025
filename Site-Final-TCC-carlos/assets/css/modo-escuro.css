@@ -1,0 +1,412 @@
+/* === Fundo geral Cabeçalho escuro === */
+ .fundo-cabecalho{
+  background-color: #262626 ;
+}
+
+/* Fim da estilização do cabeçalho */
+
+/* Estilização do Início */
+.painel-section{
+background-color: #232323;
+}
+
+.painel-card{
+   background-color: #262626;
+}
+
+.botao-secundario{
+  background-color: #262626;
+}
+/* Fim estilização  */
+
+
+/* Estilização dos Benefícios*/
+#beneficios{
+  background-color:  #232323;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.beneficio-card{
+    background-color: #262626;
+      border: 1px solid #232323;
+}
+
+.beneficios-grid{
+  box-shadow: #232323;
+}
+
+/* Fim da estilização dos Benefícios */
+
+/* Estilização da Segurança */
+
+#seguranca{
+  background-color:  #232323;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.info-quadrado{
+  background-color: #262626;
+}
+
+.dicas-seguranca-container{
+  background-color: #262626;
+}
+
+.dica-item{
+    background-color: #232323;
+  border: 1px solid #232323;
+}
+
+.painel-seguranca{
+  background-color: #262626;
+}
+
+.painel-opcao-descricao,
+.local{
+  color: #f97316;
+}
+
+.painel-opcao{
+  background-color: #232323;
+  border: 1px solid #232323;
+}
+
+.ultimos-acessos{
+  background-color: #262626;
+}
+
+.titulo-bloco{
+  color: white;
+}
+
+/* Fim da stilização da segurança */
+
+/* Estilização Suporte */
+
+.titulo-principal,
+.titulo-form,
+.atendimento-desc{
+  color: aliceblue;
+}
+
+.subtitulo-principal,
+.form-label{
+  color: #f97316;
+}
+
+.resposta-faq{
+  color: #f97316;
+}
+
+.contato-form,
+.atendimento-list,
+.faq-section{
+  background-color: #262626;
+  border: 1px solid #303030;
+}
+
+.form-input, 
+.form-select, 
+.form-textarea{
+background-color: #232323;
+border: 1px solid #232323;
+}
+
+/* Fim da estilização Suporte */
+
+/* Estilização Chat */
+
+.chat-container,
+.contact-list,
+.chat-area,
+.chat-header,
+.message-input,
+.input-search,
+.input-message,
+.modal-content
+{
+  color: aliceblue;
+  background-color: #262626;
+  border-right: 2px solid #232323;
+  border-bottom: 2px solid #232323;
+  border-top: 2px solid #232323;
+}
+
+.chat-message.received{
+  background-color: #303030;
+  border: 1px solid #303030;
+}
+
+.chat-message.sent{
+  background-color: #232323;
+  border: 1px solid #303030;
+}
+
+.chat-message.received p,
+.contact-message,
+.contact-meta span,
+.date-label{
+  color: aliceblue;
+}
+
+.chat-message.file-message{
+ background-color: #303030;
+}
+
+.action-button:hover{
+  background-color: rgba(249, 115, 22, 0.3);
+}
+
+.input-message,
+.input-search{
+  border: 1px solid #303030;
+}
+
+.contact-button:hover, 
+.contact-button.active{
+background-color: #303030;
+}
+
+.contact-name{
+  color: aliceblue;
+}
+
+/* Fim estilização Chat */
+
+/* Estilização das Tarefas*/
+
+.painel{
+  background-color: #262626;
+}
+
+.titulo,
+.titulo-chat h3,
+.ia-msg p,
+.data{
+  color: aliceblue;
+}
+
+.card-header h3{
+  font-weight: 600;
+}
+
+.ri-edit-line:hover{
+color: aliceblue;
+}
+
+.card-tarefa{
+  background-color: #202020;
+  border: 1px solid #232323;
+}
+
+.ia-chat{
+  background-color: #262626;
+  border: 1px solid #232323;
+}
+
+.ia-avatar{
+ background-color: rgba(249, 115, 22, 0.3);
+}
+
+.assistente-ia{
+  background-color: #202020;
+}
+
+.ia-msg p{
+color: #f97316;
+}
+
+.ia-msg{
+  background-color: #202020;
+}
+
+.ia-input-container input{
+  background-color: #232323;
+  border: #232323;
+}
+
+.modal-header,
+.modal-footer{
+   background-color: #303030;
+  border: 1px solid #232323;
+}
+
+.modal-body{
+  background-color: #262626;
+}
+
+.form-group label{
+  color: #f97316;
+}
+
+.form-group input,
+.form-group textarea, 
+.form-group select{
+  border: 1px solid #232323;
+  background-color: #232323;
+  color: aliceblue;
+}
+
+.btn-cancelar{
+  color: #f97316;
+background-color: #202020;
+border: 1px solid #232323;
+}
+
+.btn-cancelar:hover{
+    background-color: #200a01;
+    transition: 0.40s;
+}
+
+/* Fim estilização das Tarefas*/
+
+/* Estilização do Perfil */
+
+#link-entrar{
+  color: #fff;
+}
+
+body, #perfil {
+  background-color:  #232323;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-section,
+.card-perfil,
+.card-redes, 
+.card-infos,
+.card-preferencias,
+.visibilidade-perfil,
+.card-privacidade,
+.card-seguranca,
+.btn-seguranca,
+.btn-excluir-conta{
+    background-color: #262626;
+}
+
+.btn-alterar-foto{
+    color: #909090;
+    font-weight: 700;
+}
+
+.btn-alterar-foto:hover{
+    color: #f97316;
+    transition: 0.30s;
+}
+
+.campo input,
+.campo select,
+.campo textarea,
+.item-rede input{
+    border: 1px solid #232323;
+  background-color: #232323;
+  color: aliceblue;
+}
+
+.btn-seguranca{
+    border: 1px solid #232323;
+}
+
+.btn-excluir-conta{
+  border: 1px solid #232323;
+}
+
+.btn-seguranca:hover{
+ background-color: #232323;
+}
+
+.btn-excluir-conta:hover{
+    background-color: #200a01;
+    transition: 0.40s;
+}
+
+span,
+.opcoes-visibilidade span{
+  color: aliceblue;
+}
+
+.opcao label,
+.campo label{
+  color: #f97316;
+}
+#link-menu{
+  color: #fff;
+}
+
+/* Fim da estilização do Perfil */
+
+/* Estilização de Área de Login */
+
+.login-body{
+background-color: #232323;
+}
+
+.login-content{
+  background-color: #262626;
+  border: 1px solid #101010;
+  box-shadow: #101010;
+}
+
+.input-label,
+label,
+span{
+  color: #f97316;
+
+}
+
+.divider span{
+  background-color: #232323;
+}
+
+.divider::after{
+  background-color: #303030;
+}
+
+.divider::before{
+  background-color: #303030;
+}
+
+.input-field{
+   border: 1px solid #232323;
+  background-color: #232323;
+  color: aliceblue;
+}
+
+.social-btn{
+  background-color: #202020;
+  border: 1px solid #232323;
+}
+
+.social-btn:hover{
+  background-color: #303030;
+  transition: 0.3s;
+}
+
+/* Fim Da estilização do Login */
+
+/* Estilização do registro */
+
+.register-body{
+background-color: #232323;
+}
+
+.register-card{
+   background-color: #262626;
+  border: 1px solid #101010;
+  box-shadow: #101010;
+}
+
+.select-field{
+ border: 1px solid #232323;
+  background-color: #232323;
+  color: #f97316;
+}
+
+.password-tip{
+  color: aliceblue;
+}
+
+/* Fim da estilização do Registro */

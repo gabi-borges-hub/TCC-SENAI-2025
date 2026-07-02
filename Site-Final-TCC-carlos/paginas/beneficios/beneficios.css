@@ -1,0 +1,373 @@
+:where([class^="ri-"])::before { content: "\f3c2"; }
+
+/* Fontes utilizadas no site */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: gray-200;
+}
+
+/* Estilização do Cabeçalho */
+
+.fundo-cabecalho {
+  background-color: #F8F8FF; /* bg-gray-200 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-md */
+  position: sticky; /* sticky */
+  top: 0; /* top-0 */
+  z-index: 50; /* z-50 */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex; 
+    align-items: center;
+}
+
+.Logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* Menu de navegação */
+#Centralizar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+    
+}
+
+@media (min-width: 768px) {
+  #Centralizar {
+    display: flex;
+    gap: 2rem; 
+  }
+}
+
+#link-menu {
+  color: #1f2937; 
+  font-weight: 500; 
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#link-menu:hover {
+  color: #f97316; 
+}
+
+/* Botões de login/registro */
+#botoes-login {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+#link-entrar {
+  color: #1f2937;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#link-entrar:hover {
+  color: #f97316;
+}
+
+#botao-registrar {
+  background-color: #f97316; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem; 
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+#botao-registrar:hover {
+  opacity: 0.9;
+}
+
+/* Fim da Estilização do Cabeçalho */
+
+
+/* Estilização da página */
+.btn-acessar {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+  background-color: #f97316;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn-acessar:hover {
+  opacity: 0.9;
+}
+
+/* Seção de Benefícios */
+.beneficios-section {
+  padding: 4rem 0;
+  background-color: #F8F8FF;
+}
+
+.beneficios-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.beneficios-cabecalho {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.beneficios-cabecalho h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.beneficios-cabecalho p {
+  color: #f97316;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Grid de Cartões */
+.beneficios-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .beneficios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cartão de Benefício */
+.beneficio-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.3s ease;
+}
+
+.beneficio-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(249, 115, 22, 0.1); 
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.beneficio-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.beneficio-card p {
+  color: #f97316;
+}
+
+/* Botão */
+.beneficio-botao-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.beneficio-botao {
+  background-color: #f97316;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.beneficio-botao:hover {
+  background-color: #fb923c;
+}
+
+/* Fim da estilização da página */
+
+
+/* Estilização do rodapé */
+
+/* Rodapé */
+.rodape {
+  background-color: #111827; /* bg-gray-900 */
+  color: white;
+  padding: 3rem 0;
+}
+
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .rodape-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.rodape-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+
+.rodape-descricao {
+  color: #9ca3af; /* text-gray-400 */
+  margin-bottom: 1rem;
+}
+
+.rodape-redes {
+  display: flex;
+  gap: 1rem;
+}
+
+.rodape-redes a {
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.rodape-redes a:hover {
+  color: #f97316; /* hover:text-orange-500 */
+}
+
+.rodape-titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.rodape-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rodape-lista li {
+  margin-bottom: 0.5rem;
+}
+
+.rodape-lista a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape-lista a:hover {
+  color: #f97316;
+}
+
+.rodape-form {
+  display: flex;
+}
+
+.rodape-input {
+  flex: 1;
+  background-color: #1f2937; /* bg-gray-800 */
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+
+.rodape-botao {
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.rodape-direitos {
+  border-top: 1px solid #1f2937; /* border-gray-800 */
+  margin-top: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rodape-direitos {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.rodape-direitos p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.rodape-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.rodape-links a {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape-links a:hover {
+  color: #f97316;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TalkyCs - Sua plataforma de gerenciamento de tarefas</title>
+ <link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = {theme: {extend: {colors: { primary: '#FF6B00', secondary: '#000000' },borderRadius: {none: '0px',sm: '4px', DEFAULT: '8px',md: '12px',lg: '16px',xl: '20px','2xl': '24px','3xl': '32px',full: '9999px',button: '8px'}}}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"/>
+  <link id="style1" rel="stylesheet" href="tarefas.css" />
+  <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+
+    <nav class="fundo-cabecalho">
+
+        <div class="container">
+            <!-- Colocação da logo no HTML -->
+            <a href="#" class="logo">
+                <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+            </a>
+
+            <!-- Div dos botões da tela de inicio -->
+           <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+
+    <div class="container-tarefas">
+      <div class="painel">
+        <div class="cabecalho">
+          <h1 class="titulo">Minhas Tarefas</h1>
+          <button id="newTaskBtn" class="btn-nova-tarefa">
+            <i class="ri-add-line"></i> Nova Tarefa
+          </button>
+
+          <div id="newTaskModal" class="modal">
+            <div class="modal-conteudo">
+              <div class="modal-header">
+                <h3>Nova Tarefa</h3>
+              </div>
+              <div class="modal-body">
+                <form id="newTaskForm">
+                  <div class="form-group">
+                    <label for="taskTitle">Título da tarefa</label>
+                    <input type="text" id="taskTitle" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="taskDescription">Descrição</label>
+                    <textarea id="taskDescription" rows="4"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="taskDueDate">Data de prazo</label>
+                    <input type="date" id="taskDueDate" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="taskPriority">Prioridade</label>
+                    <select id="taskPriority">
+                      <option value="low">Baixa</option>
+                      <option value="medium">Média</option>
+                      <option value="high">Alta</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="taskAssignee">Responsáveis</label>
+                    <select id="taskAssignee" multiple>
+                      <option value="1">Ana Beatriz</option>
+                      <option value="2">Carlos Eduardo</option>
+                      <option value="3">Mariana Silva</option>
+                      <option value="4">Felipe Santos</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="taskStatus">Status</label>
+                    <select id="taskStatus">
+                      <option value="pendente">Pendente</option>
+                      <option value="em_andamento">Em progresso</option>
+                      <option value="concluida">Concluído</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button id="cancelTaskBtn" class="btn-cancelar">Cancelar</button>
+                <button id="saveTaskBtn" class="btn-salvar">Salvar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-tarefas">
+          <div class="lista-tarefas">
+            <div class="card-tarefa">
+              <div class="card-header">
+                <h3>Desenvolvimento da Landing Page</h3>
+                <span class="status em-progresso">Em progresso</span>
+              </div>
+              <div class="progresso">
+                <div class="progresso-info">
+                  <span>Progresso</span><span>75%</span>
+                </div>
+                <div class="barra">
+                  <div class="barra-preenchida w-75"></div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="data">
+                  <i class="ri-calendar-line"></i> Prazo: 30/05/2025
+                </div>
+                <div class="acoes">
+                  <button><i class="ri-edit-line"></i></button>
+                  <button><i class="ri-delete-bin-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-tarefa">
+              <div class="card-header">
+                <h3>Otimização de SEO</h3>
+                <span class="status concluido">Concluído</span>
+              </div>
+              <div class="progresso">
+                <div class="progresso-info">
+                  <span>Progresso</span><span>100%</span>
+                </div>
+                <div class="barra">
+                  <div class="barra-preenchida w-100"></div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="data">
+                  <i class="ri-calendar-line"></i> Concluído em 24/05/2025
+                </div>
+                <div class="acoes">
+                  <button><i class="ri-edit-line"></i></button>
+                  <button><i class="ri-delete-bin-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-tarefa">
+              <div class="card-header">
+                <h3>Análise de Métricas</h3>
+                <span class="status atrasado">Atrasado</span>
+              </div>
+              <div class="progresso">
+                <div class="progresso-info">
+                  <span>Progresso</span><span>30%</span>
+                </div>
+                <div class="barra">
+                  <div class="barra-preenchida w-30"></div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="data">
+                  <i class="ri-calendar-line"></i> Prazo: 20/05/2025
+                </div>
+                <div class="acoes">
+                  <button><i class="ri-edit-line"></i></button>
+                  <button><i class="ri-delete-bin-line"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="assistente-ia">
+            <div class="ia-header">
+              <div class="ia-icon">
+                <i class="ri-robot-line"></i>
+              </div>
+              <div class="titulo-chat">
+                <h3>Assistente IA</h3>
+                <p>Assitência inteligente para suas tarefas</p>
+              </div>
+            </div>
+            <div class="ia-chat" id="aiChat">
+              <div class="mensagem-ia">
+                <div class="ia-avatar">
+                  <i class="ri-robot-line"></i>
+                </div>
+                <div class="ia-msg">
+                  <p>Olá! Como posso ajudar com suas tarefas hoje?</p>
+                </div>
+              </div>
+            </div>
+            <div class="ia-input-container">
+              <input
+                type="text"
+                id="aiInput"
+                placeholder="Digite sua pergunta..."
+              />
+              <button id="aiSendBtn">
+                <i class="ri-send-plane-fill"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Fim do Rodapé -->
+ </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/css/modo-escuro.js"></script>
+<script src="tarefas.js"></script>
+
+</html>

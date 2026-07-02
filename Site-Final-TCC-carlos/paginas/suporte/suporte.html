@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TalkyCs - Sua plataforma de gerenciamento de tarefas</title>
+<link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B00',secondary:'#000000'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<link id="style1"  rel="stylesheet" href="./suporte.css">
+  <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+<body>
+    <!-- Cabeçalho -->
+
+  <!-- Cabeçalho -->
+
+  <nav class="fundo-cabecalho">
+
+    <div class="container">
+        <!-- Colocação da logo no HTML -->
+      <a href="#" class="logo">
+          <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+      </a>
+
+      <!-- Div dos botões da tela de inicio -->
+     <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+
+
+<div id="comunicacao">
+  <div id="container" class="container">
+    <h1 class="titulo-principal">Canais de Comunicação</h1>
+    <p class="subtitulo-principal">
+      Diversas formas de se conectar e interagir com nossa plataforma e equipe.
+    </p>
+
+    <div class="grid-form">
+      <!-- Formulário de contato -->
+      <div class="contato-form">
+        <h2 class="titulo-form">Entre em contato</h2>
+        <form onsubmit="sendMail()">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome completo</label>
+            <input type="text" id="name" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">Assunto</label>
+            <select id="subject" class="form-select">
+              <option value="" selected disabled>Selecione um assunto</option>
+              <option value="support">Suporte técnico</option>
+              <option value="sales">Vendas</option>
+              <option value="feedback">Feedback</option>
+              <option value="partnership">Parcerias</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea id="message" rows="4" class="form-textarea"></textarea>
+          </div>
+          <button id="btn_form" type="button" class="btn-submit">Enviar mensagem</button>
+        </form>
+      </div>
+
+      <!-- Canais de atendimento -->
+      <div class="atendimento-list">
+        <h2 class="titulo-form">Canais de atendimento</h2>
+        <ul class="lista-atendimento">
+          <li class="item-atendimento">
+            <div class="icone-atendimento suporte">
+              <i class="ri-customer-service-line ri-lg"></i>
+            </div>
+            <div class="info-canais">
+              <h3 class="atendimento-titulo">Suporte técnico</h3>
+              <p class="atendimento-desc">Disponível 24/7 para resolver problemas técnicos</p>
+              <a href="mailto:TalkyCs.Corporativo@gmail.com" class="link-atendimento">TalkyCs.Corporativo@gmail.com</a>
+            </div>
+          </li>
+          <li class="item-atendimento">
+            <div class="icone-atendimento telefone">
+              <i class="ri-phone-line ri-lg"></i>
+            </div>
+            <div class="info-canais">
+              <h3 class="atendimento-titulo">Central de atendimento</h3>
+              <p class="atendimento-desc">Segunda a sexta, das 8h às 18h</p>
+              <a href="tel:08001234567" class="link-atendimento">0800 123 4567</a>
+            </div>
+          </li>
+          <li class="item-atendimento">
+            <div class="icone-atendimento whatsapp">
+              <i class="ri-whatsapp-line ri-lg"></i>
+            </div>
+            <div class="info-canais">
+              <h3 class="atendimento-titulo">WhatsApp</h3>
+              <p class="atendimento-desc">Atendimento rápido via mensagem</p>
+              <a href="https://wa.me/5511987654321" class="link-atendimento">+55 11 98765-4321</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Perguntas frequentes -->
+      <div class="faq-section">
+        <h2 class="titulo-form">Perguntas frequentes</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como posso recuperar minha senha?</span>
+              <i class="ri-arrow-down-s-line icon-faq"></i>
+            </button>
+            <div class="faq-answer hidden">
+              <p class="resposta-faq">Para recuperar sua senha, clique em "Esqueci minha senha" na tela de login. Você receberá um e-mail com instruções para criar uma nova senha.</p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Como adicionar novos contatos?</span>
+              <i class="ri-arrow-down-s-line icon-faq"></i>
+            </button>
+            <div class="faq-answer hidden">
+              <p class="resposta-faq">Na aba de Chat, clique no botão "+" e digite o e-mail ou nome de usuário da pessoa que deseja adicionar. Você também pode escanear o QR code do contato.</p>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>A plataforma funciona em dispositivos móveis?</span>
+              <i class="ri-arrow-down-s-line icon-faq"></i>
+            </button>
+            <div class="faq-answer hidden">
+              <p class="resposta-faq">Sim, nossa plataforma está disponível para iOS e Android. Você pode baixar os aplicativos nas respectivas lojas e sincronizar todas as suas conversas e contatos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+</div>
+<script src="/assets/css/modo-escuro.js"></script>
+<script src="./suporte.js"></script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkyCs - Sua plataforma de gerenciamento de tarefas</title>
+    <link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png"> <!--logo do talky CS adicionado a aba-->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF6B00', secondary: '#000000' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link id="style1" rel="stylesheet" href="inicio.css">
+   <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+<body>
+    <!-- Cabeçalho -->
+
+    <nav class="fundo-cabecalho">
+
+        <div class="container">
+            <!-- Colocação da logo no HTML -->
+            <a href="#" class="logo">
+                <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+            </a>
+
+            <!-- Div dos botões da tela de inicio -->
+            <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html"  id="btnEntrar">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html"id="btnRegistrar">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+
+   <!-- Corpo do Site -->
+<section id="inicio" class="hero-section">
+  <div class="overlay"></div>
+
+  <!-- Tela inicial -->
+  <div class="conteudo-banner">
+    <!-- Texto Banner -->
+    <div class="texto-banner">
+      <h1>Gerencie suas tarefas com segurança e eficiência</h1>
+      <p>
+        O TalkyCs combina inteligência artificial com segurança avançada para otimizar
+        seu fluxo de trabalho e proteger seus dados.
+      </p>
+
+      <!-- Botões -->
+      <div class="botoes-banner">
+        <a href="/paginas/registro/registro.html" class="botao-primario">Começar agora</a>
+        <a href="/paginas/beneficios/beneficios.html" id="Beneficios-Button" class="botao-secundario">Conheça os benefícios</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Fim da tela inicial-->
+
+   <!-- Seção de Painel -->
+<section id="painel" class="painel-section">
+  <div class="painel-container">
+    <!-- Blocos -->
+    <div class="painel-grid">
+
+      <!-- Bloco 1 -->
+      <div class="painel-card">
+        <div class="icone-card">
+          <i class="ri-task-line ri-lg text-primary"></i>
+        </div>
+        <h3>IA de Tarefas</h3>
+        <p>Receba lembretes inteligentes e organize suas tarefas diárias com nossa IA personalizada.</p>
+        <a href="/paginas/tarefas/tarefas.html" class="btn-acessar">
+          Acessar <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+      <!-- Bloco 2 -->
+      <div class="painel-card">
+        <div class="icone-card">
+          <i class="ri-team-line ri-lg text-primary"></i>
+        </div>
+        <h3>Comunicação</h3>
+        <p>Conecte-se com sua equipe em tempo real e compartilhe informações de forma segura.</p>
+        <a href="/paginas/chat/chat.html" class="btn-acessar">
+          Acessar <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+      <!-- Bloco 3 -->
+      <div class="painel-card">
+        <div class="icone-card">
+          <i class="ri-shield-check-line ri-lg text-primary"></i>
+        </div>
+        <h3>Segurança</h3>
+        <p>Controle total sobre suas informações com criptografia avançada e autenticação em múltiplos fatores.</p>
+        <a href="/paginas/seguranca/segurança.html" class="btn-acessar">
+          Acessar <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Fim da seçao de Painel -->
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="/assets/css/modo-escuro.js"></script>
+<script src="inicio.js"></script>
+<script src="gerenciador-autenticacao.js"></script>
+</html>

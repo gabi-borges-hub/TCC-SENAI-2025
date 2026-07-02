@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+ <link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = {theme: {extend: {colors: { primary: '#FF6B00', secondary: '#000000' },borderRadius: {none: '0px',sm: '4px', DEFAULT: '8px',md: '12px',lg: '16px',xl: '20px','2xl': '24px','3xl': '32px',full: '9999px',button: '8px'}}}}
+  </script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+   <script async crossorigin="anonymous" data-clerk-publishable-key="YOUR_PUBLISHABLE_KEY" src="https://YOUR_FRONTEND_API_URL/npm/@clerk/clerk-js@latest/dist/clerk.browser.js" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"/>
+  <link id="style1" rel="stylesheet" href="login.css" />
+  <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <nav class="fundo-cabecalho">
+        <div class="container">
+            <!-- Colocação da logo no HTML -->
+            <a href="#" class="logo">
+                <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+            </a>
+
+            <!-- Div dos botões da tela de inicio -->
+          <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+<div class="login-body">
+ <div class="login-container">
+    <div class="login-card">
+      <div class="login-content">
+        <h2 class="login-title">Bem-vindo de volta</h2>
+
+        <form>
+          <!-- Email -->
+          <div class="input-group">
+            <label for="email" class="input-label">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" class="input-field" placeholder="seu@email.com">
+              <div class="input-icon"><i class="ri-mail-line"></i></div>
+            </div>
+          </div>
+
+          <!-- Senha -->
+          <div class="input-group">
+            <div class="label-row">
+              <label for="password" class="input-label">Senha</label>
+              <a href="#" class="forgot-link" id="forgot-password-link">Esqueceu a senha?</a>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" id="password" class="input-field" placeholder="••••••••">
+              <div class="input-icon"><i class="ri-lock-line"></i></div>
+              <button type="button" class="input-button-icon">
+              </button>
+            </div>
+          </div>
+
+          <!-- Lembrar -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember">
+            <label for="remember">Lembrar de mim</label>
+          </div>
+
+          <!-- Botão Entrar -->
+          <button type="submit" class="login-button">Entrar</button>
+        </form>
+
+        <!-- Divider -->
+        <div class="divider"><span>Ou continue com</span></div>
+
+        <!-- Social login -->
+        <div id="app" class="social-login">
+         <button onclick="loginComGoogle()" class="social-btn">
+  <i class="ri-google-fill" style=" color: #ea4335;"></i></button>
+          <button id="facebook-login" class="social-btn"> <i class="ri-facebook-fill" style="color: #1877f2;"></i></button>
+          <button id="apple-login"  class="social-btn"> <i class="ri-apple-fill">  </i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Redefinição de Senha -->
+<div id="modal-reset" class="modal hidden">
+  <div class="modal-content" style="position: relative;">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Redefinir Senha</h2>
+    <form id="form-reset-password">
+      <label for="reset-email">Email</label>
+      <input type="email" id="reset-email" class="input-field" required placeholder="Digite seu email" />
+
+      <label for="new-password">Nova Senha</label>
+      <input type="password" id="new-password" class="input-field" required placeholder="Digite a nova senha" />
+
+      <div style="margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem;">
+        <button type="submit" class="login-button" style="flex: 1;">Redefinir</button>
+        <button type="button" id="btn-sair-modal" class="login-button" style="flex: 1; background-color: #ccc; color: #000;">Sair</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/css/modo-escuro.js" defer></script>
+<script type="module" src="login.js"></script>
+
+<script src="gerenciador-autenticacao.js"></script>
+
+</html>

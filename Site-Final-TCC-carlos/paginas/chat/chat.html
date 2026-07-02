@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalkyCs - Sua plataforma de gerenciamento de tarefas</title>
+  <link rel="website icon"  type="png" href="/Tcc/images/logo.PNG.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#FF6B00', secondary: '#000000' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link id="style1" rel="stylesheet" href="chat.css">
+  <link id="style-escuro" rel="stylesheet" href="/assets/css/modo-escuro.css" disabled>
+</head>
+<body>
+     <!-- Cabeçalho -->
+
+    <nav class="fundo-cabecalho">
+
+        <div class="container">
+            <!-- Colocação da logo no HTML -->
+            <a href="#" class="logo">
+                <img src="/images/logo.PNG.png" alt="Logo" class="Logo"> <!-- Ajuste o tamanho conforme necessário -->
+            </a>
+
+            <!-- Div dos botões da tela de inicio -->
+            <div id="Centralizar">
+                <a id="link-menu" href="/paginas/inicio/inicio.html">Início</a>
+                <a id="link-menu" href="/paginas/beneficios/beneficios.html">Benefícios</a>
+                <a id="link-menu" href="/paginas/seguranca/segurança.html">Segurança</a>
+                <a id="link-menu" href="/paginas/suporte/suporte.html">Suporte</a>
+                <a id="link-menu" href="/paginas/chat/chat.html">Chat</a>
+                <a id="link-menu" href="/paginas/tarefas/tarefas.html">Tarefas</a>
+                <a id="link-menu" href="/paginas/perfil/perfil.html">Perfil</a>
+            </div>
+            <div id="botoes-login">
+                <a id="link-entrar" href="/paginas/login/login.html">Entrar</a>
+                <a id="botao-registrar" href="/paginas/registro/registro.html">Registrar</a>
+            </div>
+        </div>
+    </nav>
+    </div>
+<!-- Fim do cabeçalho -->
+<div class="main-wrapper">
+<div class="chat-wrapper">
+ <div class="chat-container">
+
+    <!-- Lista de Contatos -->
+    <div class="contact-list">
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar contatos..." class="input-search">
+        <div class="search-icon"><i class="ri-search-line"></i></div>
+      </div>
+      <div class="contact-items">
+        <button class="contact-button active">
+          <div class="contact-button-content">
+            <div class="profile-wrapper">
+              <div class="profile-pic">
+                <img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg" alt="Perfil">
+                <div class="status-indicator"></div>
+              </div>
+            </div>
+            <div class="contact-info">
+              <p class="contact-name">Carlos Eduardo</p>
+              <p class="contact-message">Vamos discutir o projeto?</p>
+            </div>
+          </div>
+          <div class="contact-meta">
+            <span class="contact-time">13:40</span>
+            <span class="notification-badge">2</span>
+          </div>
+        </button>
+
+        <button class="contact-button">
+          <div class="contact-button-content">
+            <div class="profile-wrapper">
+              <div class="profile-pic">
+                <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg" alt="Perfil">
+                <div class="status-indicator"></div>
+              </div>
+            </div>
+            <div class="contact-info">
+              <p class="contact-name">Juliana Costa</p>
+              <p class="contact-message">Já revisou o contrato?</p>
+            </div>
+          </div>
+          <div class="contact-meta">
+            <span class="contact-time">12:15</span>
+          </div>
+        </button>
+
+        <button class="contact-button">
+          <div class="contact-button-content">
+            <div class="profile-wrapper">
+              <div class="profile-pic">
+                <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" alt="Perfil">
+                <div class="status-indicator"></div>
+              </div>
+            </div>
+            <div class="contact-info">
+              <p class="contact-name">Ricardo Almeida</p>
+              <p class="contact-message">Planilha enviada!</p>
+            </div>
+          </div>
+          <div class="contact-meta">
+            <span class="contact-time">11:00</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Área de Conversa -->
+    <div class="chat-area">
+      <div class="chat-header">
+        <div class="header-left">
+          <div class="profile-wrapper">
+            <div class="profile-pic">
+              <img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg" alt="Perfil">
+              <div class="status-indicator"></div>
+            </div>
+          </div>
+          <div class="user-info">
+            <p class="user-name">Carlos Eduardo</p>
+            <p class="user-status">Online</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button class="action-button"><i class="ri-phone-line"></i></button>
+          <button class="action-button"><i class="ri-vidicon-line"></i></button>
+          <button class="action-button"><i class="ri-more-2-fill"></i></button>
+        </div>
+      </div>
+
+      <div class="chat-messages mensagens">
+        <span class="date-label">Hoje, 13:40</span>
+        <div class="chat-message received">
+          <p>Olá! Precisamos revisar os indicadores de desempenho do trimestre.</p>
+        </div>
+        <div class="chat-message sent">
+          <p>Claro, posso te mandar os arquivos atualizados.</p>
+        </div>
+        <div class="chat-message file-message">
+          <div class="file-icon"><i class="ri-file-excel-line"></i></div>
+          <div class="file-info">
+            <p class="file-name">indicadores_Q2.xlsx</p>
+            <p class="file-size">612 KB</p>
+          </div>
+        </div>
+        <div class="chat-message received">
+          <p>Perfeito. Também temos uma reunião amanhã às 10h.</p>
+        </div>
+      </div>
+
+      <form id="formMensagem">
+      <div class="message-input">
+        <button class="emoji-button"><i class="ri-emotion-line"></i></button>
+        <button class="attachment-button"><i class="ri-attachment-2"></i></button>
+        <input type="text" id="mensagemInput" class="input-message" placeholder="Digite uma mensagem...">
+        <button class="send-button"><i class="ri-send-plane-fill"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Modal de Chamada de Voz -->
+<div id="voiceCallModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>
+      <span id="voiceCallName">Chamando...</span>
+      <span class="dots">
+        <span>.</span><span>.</span><span>.</span>
+      </span>
+    </h2>
+    <p>📞 Ligação de voz</p>
+    <img id="voiceCallImage" src="" alt="Foto" class="call-image">
+    <button onclick="fecharModal('voiceCallModal')">Encerrar</button>
+  </div>
+</div>
+
+<!-- Modal de Chamada de Vídeo -->
+<div id="videoCallModal" class="modal hidden">
+  <div class="modal-content video">
+    <h2>
+      <span id="videoCallName">Chamando...</span>
+      <span class="dots"><span>.</span><span>.</span><span>.</span></span>
+    </h2>
+    <p>📹 Chamada de vídeo</p>
+    <video id="userCamera" autoplay playsinline muted class="camera-preview"></video>
+   <button onclick="fecharModal('videoCallModal', true)">Encerrar</button>
+  </div>
+</div>
+
+
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="rodape-container">
+    <div class="rodape-grid">
+      
+      <!-- Logo e descrição -->
+      <div>
+        <a href="#" class="rodape-logo">
+          <img src="/images/logo.PNG.png" alt="Log" class="logo-img">
+        </a>
+        <p class="rodape-descricao">Sua plataforma completa para gerenciamento de tarefas e comunicação segura.</p>
+        <div class="rodape-redes">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <!-- Empresa -->
+      <div>
+        <h3 class="rodape-titulo">Empresa</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Suporte -->
+      <div>
+        <h3 class="rodape-titulo">Suporte</h3>
+        <ul class="rodape-lista">
+          <li><a href="#">Centro de ajuda</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Status do sistema</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="rodape-titulo">Fique por dentro</h3>
+        <p class="rodape-descricao">Inscreva-se para receber as últimas novidades e atualizações.</p>
+        <form class="rodape-form">
+          <input type="email" placeholder="Seu email" class="rodape-input">
+          <button type="submit" class="rodape-botao">Inscrever</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Direitos autorais -->
+    <div class="rodape-direitos">
+      <p>©️ 2025 SecureTask. Todos os direitos reservados.</p>
+      <div class="rodape-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Fim do Rodapé -->
+
+<div class="emoji-picker hidden" id="emojiPicker">
+  <span class="emoji-item">😀</span>
+  <span class="emoji-item">😂</span>
+  <span class="emoji-item">😍</span>
+  <span class="emoji-item">🤩</span>
+  <span class="emoji-item">😎</span>
+  <span class="emoji-item">👍</span>
+  <span class="emoji-item">👎</span>
+  <span class="emoji-item">👏</span>
+  <span class="emoji-item">🙏</span>
+  <span class="emoji-item">🔥</span>
+  <span class="emoji-item">❤️</span>
+  <span class="emoji-item">💔</span>
+  <span class="emoji-item">🎉</span>
+  <span class="emoji-item">🎁</span>
+  <span class="emoji-item">💬</span>
+  <span class="emoji-item">🚀</span>
+  <span class="emoji-item">💡</span>
+  <span class="emoji-item">💻</span>
+</div>
+<input type="file" id="fileInput" style="display: none;">
+
+</div>
+</body>
+<script src="/assets/css/modo-escuro.js"></script>
+<script src="chat.js"></script>
+</html>
